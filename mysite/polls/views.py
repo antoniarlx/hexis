@@ -14,17 +14,15 @@ class Job:
 
 jobA = Job('skillsA', 'Army Infantry Man (11B)')
 jobB = Job('skillsB', 'Aviation Ordnance man (AO)')
-# jobC = Job('skillsC', 'Job C')
 
 # Write the skills for Job A
 
-jobA.technical_skills = ['Skill1', 'Skill2', 'Skill3']
-jobB.technical_skills = ['Skill3', 'Skill4', 'Skill5']
-# jobC.technical_skills = ['Skill6', 'Skill7', 'Skill8']
+jobA.technical_skills = ['Coordinated joint activities with team to accomplish set goals within rigid deadlines.', 'Regularly participated in map reading and land navigation using satellite imaging.', 'Mastered the disassembly, cleaning, maintenance and reassembly of equipment.', 'Experienced in driving vehicles ranging in size from 4,000 to 10,000 pounds.', 'Competent in reviewing and implementing procedures for machine operation.', 'Performed safety tests using computerized simulators to prepare for real world environments.', 'Trained in basic first aid, triage and applications to emergency situations.', 'Assisted in relief efforts including transportation of people and delivery of supplies.', 'Maintained a personal fitness routine and provided instructions to team members.']
 
-jobA.intangible_skills = ['Skill9', 'Skill10', 'Skill11']
-jobB.intangible_skills = ['Skill12', 'Skill13', 'Skill14']
-# jobC.intangible_skills = ['Skill15', 'Skill6', 'Skill17']
+jobB.technical_skills = ['Managed mechanical and electrical repair tasks of aircraft', 'Managed the training and development of assigned electricians', 'Executed and adhered to Management of Change process with requests', 'Directed the activities of maintenance personnel with the accountability of safety, quality, and cost', 'Identified improvements to effectiveness and efficiency in projects', 'Directed preventive/predictive maintenance programs designed to reduced unscheduled downtime']
+
+jobA.intangible_skills = ['Quickly adapts to new situations', 'Skilled at working with teams', 'Analytical and detail oriented', 'Performs well under pressure', 'Learns new tasks quickly', 'Eager to accept challenges']
+jobB.intangible_skills = ['Ability to perform tasks with minimal supervision', 'Analytical and detailed oriented', 'Strong work ethic', 'Quickly adapts to new situations', 'Performs well under pressure', 'Eager to accept challenges']
 
 
 # Create your views here.
@@ -60,14 +58,3 @@ def skillsB(request):
     context = {'veteran_job': jobB, 'veteran_skills_technical': technical_skills, 'veteran_skills_intangible': intangible_skills}
 
     return HttpResponse(template.render(context, request))
-
-# def skillsC(request):
-#
-#     template = loader.get_template('polls/skillsC.html')
-#
-#     technical_skills = jobC.technical_skills
-#     intangible_skills = jobC.intangible_skills
-#
-#     context = {'veteran_job': jobC, 'veteran_skills_technical': technical_skills, 'veteran_skills_intangible': intangible_skills}
-#
-#     return HttpResponse(template.render(context, request))

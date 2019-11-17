@@ -1,0 +1,37 @@
+<!-- {% python, codigo -->
+
+<br/>
+<h1> Skills for Veteran Job: {{ veteran_job.name }} </h1>
+<br/>
+
+<table style="width:1200px">
+
+  <tr>
+    <th align="left">Technical Skills</th>
+  </tr>
+
+  {% for skill in veteran_skills_technical %}
+
+    <tr>
+
+      <td>{{skill}}</td>
+
+    </tr>
+
+  {% endfor %}
+
+  <tr>
+    <th align="left">Intangible Skills</th>
+  </tr>
+
+  {% for skill in veteran_skills_intangible %}
+
+    <tr>
+
+      <td>{{skill}}</td>
+
+    </tr>
+
+  {% endfor %}
+
+</table>

@@ -1,0 +1,25 @@
+<!-- {% python, codigo -->
+
+<br/>
+<h1 style="background-color:LightSkyBlue;"align="center">Hexis</h1>
+<h2 align="center">Skill Translation App</h2>
+
+<br/>
+
+<br/>
+<h2> What is your job? </h2>
+<br/>
+
+<table style="width:2000px">
+
+  {% for job in veteran_jobs %}
+
+    <tr>
+
+      <td><a href="{{job.url}}">{{job.name}}</a></td>
+
+    </tr>
+
+  {% endfor %}
+
+</table>
